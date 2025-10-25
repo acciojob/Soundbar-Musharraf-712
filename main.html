@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
 	<link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-	<button class="btn" id="applouse">applouse</button>
+
+	<button class="btn" id="applause">applause</button>
 	<button class="btn" id="boo">boo</button>
 	<button class="btn" id="gasp">gasp</button>
 	<button class="btn" id="tada">tada</button>
-	<button class="btn" id="victory">vicatory</button>
+	<button class="btn" id="victory">victory</button>
 	<button class="btn" id="wrong">wrong</button>
-	<button class="stop" id="stops">stop</button>
-    <script type="text/javascript" src="./script.js">
-</script>
+	<button class="stop" id="stop">stop</button>
 
+	<!-- ✅ Audio elements Cypress can detect -->
+	<audio id="applause-sound" src="./sounds/applause.mp3"></audio>
+	<audio id="boo-sound" src="./sounds/boo.mp3"></audio>
+	<audio id="gasp-sound" src="./sounds/gasp.mp3"></audio>
+	<audio id="tada-sound" src="./sounds/tada.mp3"></audio>
+	<audio id="victory-sound" src="./sounds/victory.mp3"></audio>
+	<audio id="wrong-sound" src="./sounds/wrong.mp3"></audio>
+
+	<script src="./script.js"></script>
 </body>
-
 </html>

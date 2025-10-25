@@ -1,28 +1,23 @@
-//your JS code here. If required.
-// List of sounds
-const sounds = [
-    "sound1.mp3",
-    "sound2.mp3",
-    "sound3.mp3",
-    "sound4.mp3"
-];
+// All button elements
+const buttons = document.querySelectorAll(".btn");
 
-document.querySelectorAll(".btn").forEach((button, i) => {
-    const audio = new Audio(`./sounds/${sounds[i]}`);
-
-    button.addEventListener("click", () => {
-        stopAllSounds();
-        audio.play();
-    });
+// For each button play matching audio
+buttons.forEach(btn => {
+	btn.addEventListener("click", () => {
+		stopAll();
+		document
+			.getElementById(`${btn.id}-sound`)
+			.play();
+	});
 });
 
-document.querySelector(".stop").addEventListener("click", stopAllSounds);
+// Stop button
+document.getElementById("stop").addEventListener("click", stopAll);
 
-// Stop all sounds
-function stopAllSounds() {
-    const audios = document.querySelectorAll("audio");
-    audios.forEach(sound => {
-        sound.pause();
-        sound.currentTime = 0;
-    });
+// Stop all audio
+function stopAll() {
+	document.querySelectorAll("audio").forEach(audio => {
+		audio.pause();
+		audio.currentTime = 0;
+	});
 }
